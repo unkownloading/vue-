@@ -15,12 +15,11 @@
 Vue.createApp({
   data() {
     return {
-      count: 0
-    }
-  },
-  methods: {
-    increment() {
-      this.count++
+      message: 'hellow vue ',
+      titleColor: 'color',
+      counter: {
+        count: 1
+      }
     }
   }
-}).mount('#app')
+}).mount("#app")
