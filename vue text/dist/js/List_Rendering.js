@@ -1,3 +1,5 @@
+
+
 let id = 0
 
 Vue.createApp({
@@ -21,3 +23,5 @@ Vue.createApp({
     }
   }
 }).mount('#app')
+
+console.log(todos);
