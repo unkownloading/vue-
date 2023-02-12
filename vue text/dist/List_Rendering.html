@@ -9,6 +9,7 @@
     <!-- vue js -->
     <script src="js/vue3.js"></script>
     <!-- css -->
+
 </head>
 
 <body>
@@ -18,14 +19,14 @@
             <button>Add Todo</button>
         </form>
         <ul>
-            <li v-for="todo in todos" :key="todo.id">
+            <li v-for="(todo, todoIndex) in todos" :key="todoIndex">
                 {{ todo.text }}
-                <button @click="removeTodo(todo)">X</button>
+                <button @click="removeTodo(todoIndex)">X</button>
             </li>
         </ul>
     </div>
-    <!-- js -->
-    <script src="js/List_Rendering.js"></script>
 </body>
+<!-- js -->
+<script src="js/List_Rendering.js"></script>
 
 </html>
