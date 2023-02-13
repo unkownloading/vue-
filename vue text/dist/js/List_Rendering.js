@@ -1,27 +1,22 @@
-
-
-let id = 0
+let id = 0;
 
 Vue.createApp({
   data() {
     return {
-      newTodo: '',
-      todos: [
-        { id: id++, text: 'Learn HTML' },
-        { id: id++, text: 'Learn JavaScript' },
-        { id: id++, text: 'Learn Vue' }
+      newinput: '',
+      arr: [
+        { id: id++, text: '12345' },
+        { id: id++, text: '67890' }
       ]
     }
   },
   methods: {
-    addTodo() {
-      this.todos.push({ id: id++, text: this.newTodo })
-      this.newTodo = ''
+    add() {
+      this.arr.push({ id: id++, text: this.newinput })
+      this.newinput = ''
     },
-    removeTodo(todo) {
-      this.todos = this.todos.filter((t) => t !== todo)
+    remove(x) {
+      this.arr = this.arr.filter((t) => t !== x)
     }
   }
-}).mount('#app')
-
-console.log(todos);
+}).mount("#app")

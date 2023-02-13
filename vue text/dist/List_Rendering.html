@@ -5,27 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Rendering</title>
-    <!-- vue js -->
-    <script src="js/vue3.js"></script>
-    <!-- css -->
+    <title>列表渲染</title>
 </head>
 
 <body>
     <div id="app">
-        <form @submit.prevent="addTodo">
-            <input v-model="newTodo">
-            <button>Add Todo</button>
+        <form @submit.prevent="add">
+            <input v-model="newinput">
+            <button>+</button>
         </form>
         <ul>
-            <li v-for="todo in todos" :key="todo.id">
-                {{ todo.text }}
-                <button @click="removeTodo(todo)">X</button>
+            <li v-for="x in arr" :key="x.id">
+                {{ x.text }}
+                <button @click="remove(x)">-</button>
             </li>
         </ul>
     </div>
-    <!-- js -->
-    <script src="js/List_Rendering.js"></script>
 </body>
+<!-- vue js -->
+<script src="js/vue3.js"></script>
+<!-- js -->
+<script src="js/List_Rendering.js"></script>
 
 </html>
