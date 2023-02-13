@@ -9,6 +9,7 @@ Vue.createApp({
         { id: id++, text: '67890' }
       ]
     }
+
   },
   methods: {
     add() {

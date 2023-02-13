@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>列表渲染</title>
+    <title>List Rendering</title>
+    <!-- vue js -->
+    <script src="js/vue3.js"></script>
+    <!-- css -->
 </head>
 
 <body>
@@ -15,16 +18,12 @@
             <button>+</button>
         </form>
         <ul>
-            <li v-for="x in arr" :key="x.id">
-                {{ x.text }}
-                <button @click="remove(x)">-</button>
+            <li v-for="todo in todos" :key="todo.id">
+                {{ todo.text }}
+                <button @click="removeTodo(todo)">X</button>
             </li>
         </ul>
     </div>
 </body>
-<!-- vue js -->
-<script src="js/vue3.js"></script>
-<!-- js -->
-<script src="js/List_Rendering.js"></script>
 
 </html>
